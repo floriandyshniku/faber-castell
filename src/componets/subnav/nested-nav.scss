@@ -1,0 +1,52 @@
+.nested-nav {
+    background-color: white;
+    cursor: default;
+    height: 100%;
+    left: 400px;
+    list-style: none;
+    position: absolute;
+    padding-top: 128px;
+    transition: all 0.5s ease;
+    top: 0;
+    width: 400px;
+    z-index: 6;
+
+    &__tittle {
+        padding-left: 50px;
+        text-transform: capitalize;
+    }
+
+    &__item {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item-text {
+        padding-left: 50px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .nested-nav {
+        left: 110%;
+        padding-top: 0;
+        &__arrow{
+            position: absolute;
+            top: 35px;
+            left: 20px;
+            transform: rotate(-180deg);
+        }
+
+        &__tittle {
+            background-color: rgb(214, 211, 211);
+            padding: 20px 50px;
+            text-transform: capitalize;
+        }
+    }
+
+    .nested-nav--active {
+        left: 0;
+    }
+}

@@ -1,0 +1,118 @@
+.sub-navigation {
+  background-color: white;
+  position: absolute;
+  width: calc(100% - 50px);
+  padding-left: 50px;
+  height: 100%;
+  flex-direction: column;
+  left: -200%;
+  z-index: 99;
+  width: 350px;
+  transition: all 0.5s ease;
+  top: 0;
+  visibility: hidden;
+
+  &__arrow {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    color: black;
+    left: 20px;
+    top: 140px;
+    transform: rotate(-180deg);
+  }
+
+  &__logo {
+    margin: 20px 0px;
+  }
+
+  &__sub-item {
+    cursor: pointer;
+    list-style: none;
+    padding-top: 20px;
+  }
+
+  &__underline--active{
+    text-decoration: underline;
+  }
+
+  &--open {
+    left: 0;
+    visibility: visible;
+  }
+
+  &__title{
+    width: 100%;
+    margin-top: 34px
+  }
+
+  &__button{
+    position: absolute;
+    top: 20px;
+    z-index: 100;
+    left: 720px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 128px;
+    background: var(--clr-border);
+    width: 1px;
+    height: 100%;
+  }
+
+  &__right-arrow{
+    position: absolute;
+    right: 15px;
+    margin-top: 7px;
+    z-index: 5;
+  }
+
+  &__right-arrow--active{
+    visibility: visible;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .sub-navigation {
+    left: 100%;
+    width: 100%;
+    padding-left: 0;
+
+    &__list-item {
+      margin-top: 0px;
+    }
+
+    &__underline--active{
+      text-decoration: none;
+    }
+
+    &__title {
+      width: 100%;
+      padding: 20px 50px;
+      background-color: rgb(214, 211, 211);
+      margin-top: 0;
+    }
+    
+    &__sub-item {
+      padding: 10px 50px;
+    }
+    
+    &--open {
+      left: 0;
+    }
+
+    &__arrow{
+      top: 35px;
+    }
+
+    &:after {
+      content: none;
+    } 
+
+    &__right-arrow--active{
+      visibility: hidden;
+    }
+  }
+}
